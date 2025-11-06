@@ -48,7 +48,7 @@ public class Algoritmos {
             if (i%3==0) mensaje+="Fizz"; 
             if (i%5==0) mensaje+="Buzz";
             
-            if (mensaje=="") {
+            if (mensaje.equals("")) {
                 mensajeCompleto += " " + i;
             } else {
                 mensajeCompleto += " " + mensaje;
