@@ -21,6 +21,14 @@ public class CuentaBancaria {
         int rango = 900_000;
         this.numeroCuenta = rand.nextInt(rango) + 100_000 ;
 
+        if (listaDeCuentasBancarias.size() > 0){
+            for (CuentaBancaria cuenta: listaDeCuentasBancarias){
+                while (cuenta.getNumeroCuenta() == this.numeroCuenta){
+                    this.numeroCuenta = rand.nextInt(rango) + 100_000 ;
+                }
+            }
+        }
+
         listaDeCuentasBancarias.add(this);
     }
 
