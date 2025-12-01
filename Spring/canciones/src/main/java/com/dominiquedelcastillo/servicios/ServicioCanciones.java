@@ -25,4 +25,21 @@ public class ServicioCanciones {
     public Cancion agregarCancion(Cancion cancion) {
         return repositorioCanciones.save(cancion);
     }
+
+    public Cancion actualizaCancion(Cancion cancion) {
+        if (cancion.getId() == null) {
+            return null;
+        }
+        Cancion existente = repositorioCanciones.findById(cancion.getId()).orElse(null);
+        if (existente == null) {
+            return null;
+        }
+        
+        existente.setTitulo(cancion.getTitulo());
+        existente.setArtista(cancion.getArtista());
+        existente.setAlbum(cancion.getAlbum());
+        existente.setGenero(cancion.getGenero());
+        existente.setIdioma(cancion.getIdioma());
+        return repositorioCanciones.save(existente);
+    }
 }

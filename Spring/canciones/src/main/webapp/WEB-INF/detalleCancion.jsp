@@ -64,6 +64,7 @@
             </table>
         </c:otherwise>
     </c:choose>
+    <button onclick="location.href='${pageContext.request.contextPath}/canciones/formulario/editar/${cancion.id}'">Editar Canción</button>
 
     <p>
         <c:url var="listaUrl" value="/canciones" />
