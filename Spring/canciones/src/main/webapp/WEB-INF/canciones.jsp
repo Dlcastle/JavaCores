@@ -30,5 +30,7 @@
             </c:forEach>
         </tbody>
     </table>
+    <c:url var="agregarUrl" value="/canciones/formulario/agregar" />
+    <button onclick="location.href='${agregarUrl}'">Agregar Nueva Canción</button>
 </body>
 </html>

@@ -49,3 +49,45 @@ a:active {
 p {
     margin-top: 16px;
 }
+
+.error {
+    color: #b00020;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 720px;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 0.6rem;
+    padding: 0.6rem;
+    box-sizing: border-box;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button{
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #cfcfcf;
+    background: transparent;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
