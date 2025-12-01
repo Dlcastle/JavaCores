@@ -42,4 +42,8 @@ public class ServicioCanciones {
         existente.setIdioma(cancion.getIdioma());
         return repositorioCanciones.save(existente);
     }
+
+    public void eliminarCancion(Long id) {
+        repositorioCanciones.deleteById(id);
+    }
 }
