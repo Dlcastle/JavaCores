@@ -66,6 +66,7 @@
     </c:choose>
     <button onclick="location.href='${pageContext.request.contextPath}/canciones/formulario/editar/${cancion.id}'">Editar Canción</button>
     <form method="post" action="${pageContext.request.contextPath}/canciones/eliminar/${cancion.id}">
+        <input type="hidden" name="_method" value="delete"/>
         <button type="submit">Eliminar Canción</button>
     </form>
 
