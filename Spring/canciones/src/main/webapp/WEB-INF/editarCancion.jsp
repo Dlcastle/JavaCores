@@ -17,7 +17,15 @@
         <form:input path="titulo" placeholder="Título" />
         <form:errors path="titulo" cssClass="error"/>
         <label for="artista">Artista:</label>
-        <form:input path="artista" placeholder="Artista" />
+        <select name="artistaId">
+            <option value="">-- Seleccione un artista --</option>
+            <c:forEach var="artista" items="${artistas}">
+                <option value="${artista.id}"
+                    <c:if test="${not empty cancion.artista and cancion.artista.id == artista.id}">selected</c:if>>
+                    ${artista.nombre} ${artista.apellido}
+                </option>
+            </c:forEach>
+        </select>
         <form:errors path="artista" cssClass="error"/>
         <label for="album">Álbum:</label>
         <form:input path="album" placeholder="Álbum" />

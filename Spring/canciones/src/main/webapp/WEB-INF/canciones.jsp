@@ -13,7 +13,7 @@
         <thead>
             <tr>
                 <th>Título</th>
-                <th>Autor</th>
+                <th>Artista</th>
                 <th>Detalle</th>
             </tr>
         </thead>
@@ -21,7 +21,7 @@
             <c:forEach var="cancion" items="${canciones}">
                 <tr>
                     <td><c:out value="${cancion.titulo}" /></td>
-                    <td><c:out value="${cancion.artista}" /></td>
+                    <td><c:out value="${cancion.artista.nombre}"/>&nbsp;<c:out value="${cancion.artista.apellido}"/></td>
                     <td>
                         <c:url var="detalleUrl" value="/canciones/detalle/${cancion.id}" />
                         <a href="${detalleUrl}">Detalle</a>
@@ -32,5 +32,6 @@
     </table>
     <c:url var="agregarUrl" value="/canciones/formulario/agregar" />
     <button onclick="location.href='${agregarUrl}'">Agregar Nueva Canción</button>
+    <a href="${pageContext.request.contextPath}/artistas">Ir a artistas</a>
 </body>
 </html>

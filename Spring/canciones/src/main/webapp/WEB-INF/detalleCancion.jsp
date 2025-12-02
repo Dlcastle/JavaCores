@@ -24,7 +24,7 @@
                     </tr>
                     <tr>
                         <th>Artista</th>
-                        <td><c:out value="${cancion.artista}" /></td>
+                        <td><c:out value="${cancion.artista.nombre}"/>&nbsp;<c:out value="${cancion.artista.apellido}"/></td>
                     </tr>
                     <tr>
                         <th>Álbum</th>
